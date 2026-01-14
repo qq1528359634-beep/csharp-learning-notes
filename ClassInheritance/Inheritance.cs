@@ -1,14 +1,11 @@
 ﻿
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Channels;
-
 namespace Inheritance
 {
 
     class Pet
     {
-        public string Name { get; set; }
-        public string Color { get; set; }
+        public string? Name { get; set; }
+        public string? Color { get; set; }
 
         //重写Tostring方法
         public override string ToString() => GetType().Name;
@@ -64,7 +61,7 @@ namespace Inheritance
     }
     class Program
     {
-        static void Main(string[] args)
+         void Main(string[] args)
         {
             Pet pet = new Cat();
             Kid kid = new(pet, "Tom","yellow");
