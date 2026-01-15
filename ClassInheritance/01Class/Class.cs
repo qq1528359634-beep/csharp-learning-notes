@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Class
+namespace Csharp._01Class
 {
     class Student
     {   //类是一种数据结构 date structure  当前student类就有2组件1个方法
@@ -34,7 +34,7 @@ namespace Class
         // ~Student() { Console.WriteLine("ByeBye"); }
         //~Student() { Amount--; }
     }
-     class ProgramClass
+     class Class
     {
         static void Main(string[] args)
         {  //类型可以创建变量  类型可以创建实例  默认初始化构造器
