@@ -32,9 +32,9 @@ namespace Inheritance
 
         private Pet _pet;
         private string _FavoriteColor { get; set; }
-        public Kid(Pet pet, string petName,string color)
+        public Kid(Pet pet, string petName, string color)
         {
-            _FavoriteColor= color;
+            _FavoriteColor = color;
             _pet = pet;
             _pet.Name = petName;
             _pet.Color = _FavoriteColor;
@@ -47,7 +47,7 @@ namespace Inheritance
         }
         public void InteractWithPet<T>(Action<T> action) where T : Pet
         {
-            if ( _pet is T specializedPet)
+            if (_pet is T specializedPet)
             {
                 action(specializedPet);
             }
@@ -55,30 +55,30 @@ namespace Inheritance
             {
                 Console.WriteLine($"The pet is a {_pet}, not a {typeof(T).Name}!");
             }
-        }     
+        }
 
-       
+
     }
     class Program
     {
-         void Main(string[] args)
+        static void Main(string[] args)
         {
             Pet pet = new Cat();
-            Kid kid = new(pet, "Tom","yellow");
+            Kid kid = new(pet, "Tom", "yellow");
             kid.ChosePetColor();
             kid.InteractWithPet<Cat>(cat => cat.ClimbTree());
             Console.WriteLine();
 
             Pet pet1 = new Dog();
-            Kid kid1 = new(pet1, "Ander","white");
+            Kid kid1 = new(pet1, "Ander", "white");
             kid1.ChosePetColor();
             kid1.InteractWithPet(delegate (Dog dog) { dog.CatchBall(); });
             Console.WriteLine();
 
-            Pet pet2 = new Dog();
-            Kid kid2 = new(pet2, "Kecy","blue");
+            Pet pet2 = new Bird();
+            Kid kid2 = new(pet2, "Kecy", "blue");
             kid2.ChosePetColor();
-            kid2.InteractWithPet<Bird>(b =>b.Fly() );
+            kid2.InteractWithPet<Bird>(b => b.Fly());
         }
 
     }

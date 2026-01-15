@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ClassInheritance
+namespace Class
 {
     class Student
     {   //类是一种数据结构 date structure  当前student类就有2组件1个方法
@@ -45,8 +45,9 @@ namespace ClassInheritance
             student.Reporty();
            
 
-            //读取Student类型被储存于t中 放射的原理
+            //读取Student类型被储存于t中 反射的原理
             Type t=typeof(Student);  
+            //通过类型创建对象
             object o=Activator.CreateInstance(t,1,"Tim");
             Console.WriteLine(o.GetType().Name);
             Student stu=o as Student;
