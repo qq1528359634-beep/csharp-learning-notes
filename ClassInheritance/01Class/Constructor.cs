@@ -52,7 +52,7 @@ namespace Csharp._01Class
     
     class Sample
     {
-        private string _value = "field";
+        private string _value = "field";//frist
         public string Value
         {
             get
@@ -61,12 +61,12 @@ namespace Csharp._01Class
                 return _value;
             }
             set
-            {
-                _value = value;
+            {   
+                _value = value;//third
             }
 
         }
-        public Sample(string value)
+        public Sample(string value)//second
         {
             Print();
             this._value = value;
@@ -93,7 +93,59 @@ namespace Csharp._01Class
             //initializer
         }
     }
+    /*class Program1
+    {
+        private string _value = "field";
+        private bool _count = true;
 
+        public string Value
+        {
+            get
+            {
+
+                return _value;
+            }
+
+            set
+            {
+                if (_count)
+                {
+                    Print(_value);
+                    _count = false;
+                }
+                ;
+
+                _value = value;
+            }
+        }
+
+        public Program1(string value)
+        {
+
+            this.Value = value;
+            Print(Value);
+
+        }
+        public void Print(string value)
+        {
+            Console.WriteLine(value);
+        }
+        static void Main(string[] args)
+        {
+            Program1 sequence = new Program1("constructor")
+            {
+                Value = "initializer",
+
+            };
+
+            sequence.Print(sequence.Value);
+            //field
+            //constructor
+            //initializer
+        }
+    }
+
+}*/
     #endregion
 }
 
