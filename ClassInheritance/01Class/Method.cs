@@ -26,7 +26,8 @@ namespace Csharp._01Class
         }
         public void VariablesPrint()
         {
-            Console.WriteLine(str);//ローカル変数を宣言位置より前の位置で呼び出せない
+            //Console.WriteLine(str);
+            //ローカル変数を宣言位置より前の位置で呼び出せない
             string str = "test";
         }
         public void VariablesConceal()
@@ -41,8 +42,8 @@ namespace Csharp._01Class
         public void VariablesConflict()
         {
             string date ="Local variables";
-            {
-                string date = "block variables"; //Variables Conflict　error～
+            { //Variables Conflict　error～
+              // string date = "block variables"; 
             }
         }
     }
