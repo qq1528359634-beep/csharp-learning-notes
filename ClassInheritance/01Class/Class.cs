@@ -36,7 +36,7 @@ namespace Csharp._01Class
     }
      class Class
     {
-        static void Main(string[] args)
+         void Main(string[] args)
         {  //类型可以创建变量  类型可以创建实例  默认初始化构造器
            // Student student = new Student() { Name = "Tim", ID = 100 }; 
 

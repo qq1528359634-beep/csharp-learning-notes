@@ -19,7 +19,7 @@ namespace Csharp._01Class
             string date = "fake";
             return this.date;
         }
-        static void Main(string[] args)
+         void Main(string[] args)
         {
             var s = new ActionScope();
             Console.WriteLine(s.Output());//fake
