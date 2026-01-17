@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="ClassInheritance/Csharp.csproj" />
   <Project Path="Inheritance/Inheritance.csproj" Id="a9f73fea-aa96-4829-b112-3e0a6e2bddfa" />
   <Project Path="Polymorphic/Polymorphic(not yet started ).csproj" Id="b1f28cec-8571-48fa-9723-baefe597b528" />
 </Solution>
