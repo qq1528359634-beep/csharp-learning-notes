@@ -9,7 +9,7 @@ namespace Csharp.Delegate
     //定義されたデリケートと同じ型な方法だけが割り当て可能
   
 
-    internal class Delegate
+    internal class Delegate_0
     {
         static void Run(string str)
         {
