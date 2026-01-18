@@ -21,7 +21,7 @@ namespace Csharp.Delegate
         {
             Delegate_1 delegate_1 = new Delegate_1();
             Actions actions = new Actions();    
-            string[] str = { "赤神", "青神", "かきがみ" };
+            string[] str = { "あかまきがみ", "あおまきがみ", "きまきがみ" };
             OutputPross outputPross = new OutputPross(actions.Count);
             outputPross = new OutputPross(actions.Joint);
             Console.WriteLine(actions.CountResult);
