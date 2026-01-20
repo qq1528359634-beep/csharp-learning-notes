@@ -1,7 +1,6 @@
-﻿
-using System.Text;
+﻿using System.Text;
 
-namespace AwaitAsync1
+namespace dotNET.AwaitAsync
 {
 
     class Program

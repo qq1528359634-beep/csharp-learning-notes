@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Csharp/Csharp.csproj" />
-  <Project Path="Inheritance/Inheritance.csproj" Id="a9f73fea-aa96-4829-b112-3e0a6e2bddfa" />
+  <Project Path="dotNET/dotNET.csproj" Id="ba5e5b90-0274-482d-bb10-cc0ef526b26e" />
+  <Project Path="LeeCode/LeeCode.csproj" Id="2f772097-9a8f-4156-beb3-e829701eed72" />
 </Solution>
