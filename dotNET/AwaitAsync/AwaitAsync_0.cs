@@ -6,23 +6,27 @@ namespace dotNET.AwaitAsync
     class Program
     {
         static async Task Main(string[] args)
-        {
-            /*string filename = @"C:\Users\15283\source\repos\Drafts\temp\1.txt";
-            File.WriteAllText(filename, "hello");
-            string s = File.ReadAllText(filename);
-            Console.WriteLine(s);*/
-            string filename = @"C:\Users\15283\source\repos\Drafts\temp\1.txt";
+        {   //filenameにファイルアドレスとファイルタイトルを与える
+            /* string filename = @"C:\Users\15283\source\repos\file.txt";
+             File.WriteAllText(filename, "hello");
+            string str= File.ReadAllText(filename);
+             Console.WriteLine(str);*/
+            string filename = @"C:\Users\15283\Source\repos\file.txt";
+            await File.WriteAllTextAsync(filename, "hello");
+            string str = await File.ReadAllTextAsync(filename);
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < 10000; i++)
             {
                 sb.AppendLine("hello");
             }
-            //如果没有await则下个文件不等他写完就访问 同时2个进程访问一个文件会报错
             await File.WriteAllTextAsync(filename, sb.ToString());
-            string s = await File.ReadAllTextAsync(filename);
-            Console.WriteLine(s);
+            //awaitが自動的にTask中の戻り値を取ってくれる
+            //イコール下のコード　
             Task<string> t = File.ReadAllTextAsync(filename);
-            string a = await t;
+            str = await t;
+
+            Console.WriteLine(str);
+
         }
     }
 
