@@ -6,7 +6,7 @@ namespace dotNET.AwaitAsync
 {
     internal class Part_2_5
     {
-        async Task Main_(string[] args)
+        static async Task Main_(string[] args)
         {
             string url = "https://www.youzack.com";
             string deskFilePath = @"C:\Users\15283\source\repos\filename.txt";
@@ -16,7 +16,7 @@ namespace dotNET.AwaitAsync
 
         }
         //假如没有异步方法可以调用
-        void Main_()
+        static void Main_()
         {
             string deskFilePath = @"C:\Users\15283\source\repos\filename.txt";
             Task<string> t = File.ReadAllTextAsync(deskFilePath);
