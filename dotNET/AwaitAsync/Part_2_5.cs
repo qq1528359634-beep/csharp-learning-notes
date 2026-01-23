@@ -35,7 +35,6 @@ namespace dotNET.AwaitAsync
             { //HttpClient にはIDisposableが付いてる　using でリソース手動回収
                 string str = await client.GetStringAsync(url);
                 await File.WriteAllTextAsync(destFilePath, str);
-
                 Console.WriteLine(str);
                 Console.WriteLine("OK");
 
