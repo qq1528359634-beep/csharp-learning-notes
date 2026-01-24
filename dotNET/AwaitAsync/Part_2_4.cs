@@ -6,7 +6,7 @@ namespace dotNET.AwaitAsync
 {
     internal class Part_2_4
     {
-        async Task Main(string[] args)
+       static async Task Main(string[] args)
         {
             // string filename = @"C:\Users\15283\source\repos\file.txt";
             // File.WriteAllText(filename,"Hello World !");
