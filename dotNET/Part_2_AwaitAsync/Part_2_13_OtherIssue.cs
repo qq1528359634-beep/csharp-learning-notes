@@ -14,7 +14,7 @@ namespace dotNET.AwaitAsync
     }
     interface IGetChars
     {
-        //dont need to add async
+        //don't need to add async
         Task<int> GetCharsAsync(string file);
     }
 
