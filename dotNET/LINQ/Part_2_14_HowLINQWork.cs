@@ -9,7 +9,7 @@ namespace dotNET.LINQ
     #endregion
     internal class Part_2_14_HowLINQWork
     {
-        static void Main(string[] args)
+         void Main(string[] args)
         {   //using System.Linq
             int[] nums = new int[] { 3, 5, 66, 77, 33, 2, 9, 35 };
             //where 方法遍历集合中的每个元素对于集合中的每个元素都调用
@@ -38,7 +38,7 @@ namespace dotNET.LINQ
         }
 
         //yield return
-        static IEnumerable<int> MyWhere2(IEnumerable<int> items, Func<int, bool> f)
+        static IEnumerable<int> MyWhere2(this IEnumerable<int> items, Func<int, bool> f)
         {
             foreach (var item in items)
             {
