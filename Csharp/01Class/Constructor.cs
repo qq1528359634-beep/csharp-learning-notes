@@ -30,7 +30,7 @@ namespace Csharp._01Class
     class initializer_
     {
 
-        static void Main(string[] args)
+         void Main(string[] args)
         {
             Constructor person = new Constructor();
             person.PrintName();
