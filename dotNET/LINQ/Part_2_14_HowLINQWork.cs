@@ -16,7 +16,7 @@ namespace dotNET.LINQ
             //a=>a>10 判断是否为true 如果为true 则返回集合之中
             // IEnumerable<int> reslut = nums.Where(a => a > 10);
             // IEnumerable<int> reslut = MyWhere2(nums, a => a > 10);
-            var reslut = MyWhere2(nums, a => a > 10);
+            var reslut = nums.MyWhere2(a => a > 10);
             foreach (var item in reslut)
             {
                 Console.WriteLine(item);
@@ -38,7 +38,11 @@ namespace dotNET.LINQ
         }
 
         //yield return
-        static IEnumerable<int> MyWhere2(this IEnumerable<int> items, Func<int, bool> f)
+        
+    }
+  public static class ExtensionMethod
+    {
+       public static IEnumerable<int> MyWhere2(this IEnumerable<int> items, Func<int, bool> f)
         {
             foreach (var item in items)
             {
