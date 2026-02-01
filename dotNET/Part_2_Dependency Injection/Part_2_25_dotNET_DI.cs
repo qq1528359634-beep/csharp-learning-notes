@@ -9,11 +9,37 @@ namespace dotNET.Part_2_Dependency_Injection
     internal class Part_2_25_dotNET_DI
     {
         //use DI
+
         static void Main(string[] args)
+        {
+            //创建存放服务的一个集合
+            ServiceCollection services = new ServiceCollection();
+            services.AddScoped<ITestService, TestServiceImpl>();
+            using (ServiceProvider sp = services.BuildServiceProvider())
+            {   //我只要求服务   框架负责帮我现实
+                //if GetService not find service,return null
+                //ITestService ts1 = sp.GetService<TestServiceImpl>();
+                ITestService ts1 = sp.GetService<ITestService>();
+                ts1.Name = "tom";
+                ts1.SayHi();
+                Console.WriteLine(ts1.GetType());
+                //if GetRequiredService not find service,throw exception
+                ITestService ts2 = sp.GetRequiredService<ITestService>();
+                IEnumerable<ITestService> tests =sp.GetServices<ITestService>();
+                foreach (ITestService test in tests)
+                {
+                    Console.WriteLine(test.GetType());
+                }
+            }
+        }   
+
+
+        #region AddTransient
+        static void Main_1(string[] args)
         {   //创建存放服务的一个集合
             ServiceCollection services = new ServiceCollection();
             //向其中添加一个服务 
-            #region AddTransient
+            
             services.AddTransient<TestServiceImpl>();
             //相当于服务定位器
             using(ServiceProvider sp=services.BuildServiceProvider())
@@ -52,7 +78,7 @@ namespace dotNET.Part_2_Dependency_Injection
             #endregion
 
             #region AddScoped
-            services.AddScoped<TestServiceImpl>();
+            services.AddSingleton<TestServiceImpl>();
             using (ServiceProvider sp = services.BuildServiceProvider())
             {   
                 
