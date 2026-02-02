@@ -15,6 +15,10 @@ namespace dotNET.Part_2_Dependency_Injection
             //创建存放服务的一个集合
             ServiceCollection services = new ServiceCollection();
             services.AddScoped<ITestService, TestServiceImpl>();
+            services.AddScoped<ITestService, TestServiceImpl2>();
+            //service.AddScoped<typeof(ITestService), typeof(TestServiceImpl)>;
+            //service.AddScoped<typeof(ITestService), new TestServiceImpl()>;
+            //service.AddScoped<TestServiceImpl,  TestServiceImpl()>;
             using (ServiceProvider sp = services.BuildServiceProvider())
             {   //我只要求服务   框架负责帮我现实
                 //if GetService not find service,return null
@@ -25,7 +29,15 @@ namespace dotNET.Part_2_Dependency_Injection
                 Console.WriteLine(ts1.GetType());
                 //if GetRequiredService not find service,throw exception
                 ITestService ts2 = sp.GetRequiredService<ITestService>();
+                //get services
                 IEnumerable<ITestService> tests =sp.GetServices<ITestService>();
+                foreach (ITestService test in tests)
+                {
+                    Console.WriteLine(test.GetType());
+                }
+                //when add many services of the same interface,GetService
+                //or GetRequiredService will return the last one
+                var tests1 = sp.GetService<ITestService>();
                 foreach (ITestService test in tests)
                 {
                     Console.WriteLine(test.GetType());

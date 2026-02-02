@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Part_2_Dependency Injection\Dependency_Injection_Comprehensive_Example\" />
+    <ProjectReference Include="..\MailServices\MailServices.csproj" />
   </ItemGroup>
 
 </Project>
