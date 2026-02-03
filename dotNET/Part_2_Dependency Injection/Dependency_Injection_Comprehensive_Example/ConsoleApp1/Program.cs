@@ -15,14 +15,20 @@ namespace draft
         {
           ServiceCollection services = new ServiceCollection();
             //services.AddScoped<ILogProvider, ConsoleLogProvider>();
-            services.AddConsoleLog();
+
             //services.AddScoped(typeof(IConfigService),s=>new IniFileConfigService
             //{
             //    FilePath = "C:\\Users\\15283\\source\\repos\\Draft\\ConsoleApp1\\mail.ini"
             //});
-            services.AddConsoleConfig("mail.ini");
+           services.AddScoped<IConfigService, EnvVarConfigService>();
+            services.AddIniFileConfig("mail.ini");
+           
+          
+            services.AddLayeredConfig();
+            
             //services.AddScoped<IConfigService, ConfigService>();
             services.AddScoped<IMailService, MailService>();
+            services.AddConsoleLog();
             using (ServiceProvider sp = services.BuildServiceProvider())
             {
                 //对于第一个根服务器只能GetRequiredService
