@@ -1,4 +1,4 @@
-~~ConsoleApp 独立可以运行 有Main方法 生成exe~~
+ConsoleApp 独立可以运行 有Main方法 生成exe
 	<ins> ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目引用</ins>
 
 实例方法  写在类内部 通过实例来调用
