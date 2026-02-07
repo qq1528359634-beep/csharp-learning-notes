@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Csharp.Method
+namespace Csharp.Method_1
 {
     internal class ValParameters
     {
