@@ -15,3 +15,31 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 	
 例：A部品上装B和C部品，此时给主体（汽车）装上A部品 就相当于装上了B和C部品
 </details>
+
+<details open>
+<summary>委托</summary>
+</details>
+
+签名
+方法名 + 参数列表（数量、顺序、类型）
+
+## 事件
+<details open>
+<summary>事件的5要素</summary>
+	<li>1.订阅者: 订阅事件并提供事件的处理方法 +=订阅事件</li>
+	<li>2.发布者: 负责事件触发的逻辑</li>
+	<li>3.委托: 定义响应事件的方法的签名（参数列表+返回值）</li>
+	<li>4.事件: 当事件被触发时，调用所有订阅者注册的方法</li>
+	<li>5.数据: 通过事件传递给订阅者的信息</li>
+	
+</details>
+<details open>
+<summary>.事件的调用</summary>
+事件成员只能出现在+=或-=符号的左侧，以及声明事件的类内部
+</details>
+
+1. First list item
+   <details open>
+   - <summary>First nested list item</summary>
+   </details>
+     - Second nested list item
