@@ -13,7 +13,7 @@ namespace Csharp.Interface
             Animals[] animals = new Animals[3];
             animals[0]=new Cats("kitten");
             animals[1]=new Dogs("puppy");
-            animals[2]=new Birds("");
+            animals[2]=new Birds("？？？");
             foreach(var animal in animals)
             {
                 IBabyCall babyCall= animal as IBabyCall;
@@ -26,7 +26,7 @@ namespace Csharp.Interface
     }
     interface IBabyCall
     {
-       void Call();
+     public   void Call();
     }
     class Animals
     {
@@ -38,22 +38,16 @@ namespace Csharp.Interface
         }
     }
     class Cats : Animals, IBabyCall 
-    {    public Cats(string a) : base(a)
-        {
-
-        }
-        void IBabyCall.Call()
+    {    public Cats(string a) : base(a) { }
+         void IBabyCall.Call()
         {
             Console.WriteLine($"{this.BabyCalled}");
         }
     }
     class Dogs : Animals,IBabyCall
     {
-        public Dogs(string a) : base(a)
-        {
-
-        }
-        void IBabyCall.Call()
+        public Dogs(string a) : base(a) { }
+         void IBabyCall.Call()
         {
             Console.WriteLine($"{this.BabyCalled}");
         }
@@ -61,11 +55,7 @@ namespace Csharp.Interface
     }
     class Birds : Animals
     {
-        public Birds(string a) : base(a)
-        {
-
-        }
-
+        public Birds(string a) : base(a) { }
     }
     
 }
