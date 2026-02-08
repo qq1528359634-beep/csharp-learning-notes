@@ -44,7 +44,7 @@ namespace Csharp.Delegate
     }
 
     #endregion
-    #region  Examples of custom dele gation (with return value)
+    #region  Examples of custom delegation (with return value)
     delegate int D2(int a, int b);
     class Program1
     {
