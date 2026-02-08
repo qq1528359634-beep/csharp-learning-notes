@@ -5,10 +5,11 @@ using System.Text;
 namespace Csharp.Event
 {
     internal class A_Standard_Event_Example
-    {
+    {  //Event
         public event  EventHandler CountedADozens;
 
-       public void Docount()
+        //Invoker
+        public void Docount()
         {
             for (int i = 0; i < 100; i++)
             {
@@ -27,7 +28,8 @@ namespace Csharp.Event
                 DozensCount = 0;
             incrementer.CountedADozens += OnCountedDozens;
         }
-        void OnCountedDozens(object? sender, EventArgs e)
+        //Subscriber
+        void OnCountedDozens(object? sender, EventArgs e) //e can be null
         {
             DozensCount++;
             Console.WriteLine($"counted: {DozensCount}");
