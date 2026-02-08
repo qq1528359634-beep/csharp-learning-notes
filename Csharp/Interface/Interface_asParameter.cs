@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Csharp.Interface
 {
-    internal class Use_Interface_asParameter
+    internal class Interface_asParameter
     {
         interface IPrinter
         {
@@ -45,6 +45,7 @@ namespace Csharp.Interface
 
             internal class Classes_implement__interface
             {
+
                 static void PrintPrinterInfo(IPrinter Iprinter)
                 {
                     Console.WriteLine($"Name: {Iprinter.GetName()}, Age: {Iprinter.GetAge()}");

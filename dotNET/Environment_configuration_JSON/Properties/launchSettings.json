@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "JasonExample": {
+      "commandName": "Project",
+      "commandLineArgs": "name=chq age=28 Proxy:Address=128 Proxy:Port=404\r\nProxy:Ids:0=1 Proxy:Ids:1=2 Proxy:Ids:2=5",
+      "environmentVariables": {
+        "C1_name": "chanhanqing",
+        "C1_age": "28",
+        "C1_Proxy:Address": "123",
+        "C1_Proxy:Port": "123123",
+        "C1_Proxy:Ids:0": "1",
+        "C1_Proxy:Ids:1": "2",
+        "C1_Proxy:Ids:2": "3"
+      }
+    }
+  }
+}

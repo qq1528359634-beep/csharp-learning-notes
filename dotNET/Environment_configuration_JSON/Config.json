@@ -2,7 +2,11 @@
 
 
   "name": "yzk",
-  "age": "18",
-  "Proxy": {"address": "abc","port": "80"}
+  "age": "10",
+  "Proxy": {
+    "address": "abc",
+    "port": "80",
+    "Ids": [6,8,9]
+  }
 }
 
