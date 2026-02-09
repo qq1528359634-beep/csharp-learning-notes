@@ -22,6 +22,7 @@
   
 |English|  日本語| 中文|
 |------:|--------|-----|
+|callback| |回调函数|
 |constructor|	コンストラクタ||
 |initializer|	イニシャライザ|初始化器|
 |instance|	インスタンス|实例|
