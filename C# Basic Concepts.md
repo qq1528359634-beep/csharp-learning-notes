@@ -1,4 +1,7 @@
+
 <h1>C#之路</h1>
+二进制负数转化，符号位不变其余位取反再加1
+
 ConsoleApp 独立可以运行 有Main方法 生成exe\
 ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目引用
 
