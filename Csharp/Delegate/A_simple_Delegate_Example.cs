@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Csharp.Delegate
-{
+{   //デリゲートを宣言する
     delegate void MyDel(int value);
     internal class Programe
     {
         static void Main(string[] args)
         {
-            MyDel del;
+            Programe prog = new Programe();
+            //MyDelの変数delを最初のメソッドを割り当てる
+            MyDel del = new MyDel(prog.GetValue);
             Random rand = new Random();
 
-            Programe prog = new Programe();
-
             int value = rand.Next(1, 100);
-            del = value < 50 ? new MyDel(prog.LowValue) : new MyDel(prog.HighValue);
+
+            if (value < 50)
+            {  //delにメソッドを追加
+                del += prog.LowValue;
+            } else if (value >= 50)
+            {//delにメソッドを追加
+                del += prog.HighValue;
+            }
+            //delに追加されたメソッドを実行する
             del(value);
 
         }
@@ -26,6 +34,12 @@ namespace Csharp.Delegate
         void HighValue(int value)
         {
             Console.WriteLine($"{value} is high!");
+        }
+        void GetValue(int value)
+        {
+            {
+                Console.WriteLine($"The value is {value}!");
+            }
         }
     } 
 }
