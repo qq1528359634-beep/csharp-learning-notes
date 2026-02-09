@@ -9,22 +9,22 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 拓展方法  写在外部类  是后来贴上去的静态方法\
 *例：给我一个对象 可以是汽车图纸（类）也可以是汽车（实例），我给他贴上一个标签，可以通过着对象来访问并使用这个标签*
 
-<details open>
+<details close>
 <summary>类库的依赖</summary>
-如果一个类库A依赖了其它类库B和C，则引用这个类库A的同时就是依赖了类库B和C
+&emsp;如果一个类库A依赖了其它类库B和C，则引用这个类库A的同时就是依赖了类库B和C
 	
 例：A部品上装B和C部品，此时给主体（汽车）装上A部品 就相当于装上了B和C部品
 </details>
 
 <h2>委托</h2>
-<details open>
+<details close>
 <summary>什么是委托</summary>
-&emsp;&emsp;委托是引用类型，委托类型的实例可以挂载方法，定义一个委托类型相当于规定了什么样的方法可以挂载在委托实例上。
+&emsp;委托是引用类型，委托类型的实例可以挂载方法，定义一个委托类型相当于规定了什么样的方法可以挂载在委托实例上。
 通过=给委托对象赋初始值，通过+=追加挂载方法，-=移除已挂载的方法。
 </details>
-<details open>
+<details close>
 <summary>调用委托实例</summary>
-&emsp;&emsp;调用委托实例等于调用挂载在委托实例上的方法。
+&emsp;调用委托实例等于调用挂载在委托实例上的方法。
 </details>
 
 
@@ -32,7 +32,7 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 方法名 + 参数列表（数量、顺序、类型）
 
 <h2>事件</h2>
-<details open>
+<details close>
 <summary>事件的5要素</summary>
 	<li>事件的拥有者: 拥有事件成员的类</li>
 	<li>事件成员: 通过event定义的类中成员，用于挂载事件响应器</li>
@@ -42,7 +42,7 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 	<br><i>事件拥有者声明事件，事件的响应者将自己的事件处理器挂载在事件上，当事件被触发，调用所有挂载在事件上的事件处理器.</i><br\>
 	
 </details>
-<details open>
+<details close>
 <summary>事件的调用</summary>
 事件成员只能出现在+=或-=符号的左侧，以及声明事件的类内部
 </details>
