@@ -71,10 +71,11 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 
 <details close>
 <summary>溢出检测</summary>
-<li>check:int a=check((int)longNumber); 如果值溢出就抛出OverflowException异常
-<li>uncheck：int a=check((int)longNumber); 值溢也不报错
+<li>check:int a=check((int)longNumber); 如果值溢出就抛出OverflowException异常</li>
+<li>uncheck：int a=check((int)longNumber); 值溢也不报错</li>
 <br><i>check和uncheck只管整数溢出，不作用于引用类型或浮点型</i><br\>
-<detail close>
+</details>
+<details close>
 <summary>is 运算符</summary>
 如果类型A能够在运行期间成功转化为B则返回true，否则返回false
 <br>只用于引用类型的转化，不可用于值类型和自定义转化类型<br\>
