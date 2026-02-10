@@ -65,6 +65,8 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 <summary>显式转化</summary>
  有丢失数据或者精度，或报错的风险需要强制转化表达式
  <br><i>ex:父类转子类，long转int</i><br\>
+<li>括号强转，as转化
+ <br><i>括号强转失败抛出异常，as转化失败返回null</i><br\>
 </details>
 
 <details close>
@@ -72,4 +74,9 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 <li>check:int a=check((int)longNumber); 如果值溢出就抛出OverflowException异常
 <li>uncheck：int a=check((int)longNumber); 值溢也不报错
 <br><i>check和uncheck只管整数溢出，不作用于引用类型或浮点型</i><br\>
+<detail close>
+<summary>is 运算符</summary>
+如果类型A能够在运行期间成功转化为B则返回true，否则返回false
+<br>只用于引用类型的转化，不可用于值类型和自定义转化类型<br\>
+</detail>
 
