@@ -43,15 +43,33 @@ ClassLibrary 不可以独立运行 无Main方法 生成dll 需要被其他项目
 	<li>事件处理器: 当事件触发时会调用挂载在事件上的事件处理器</li>
 	<li>事件订阅: 将事件处理器 挂载在事件上</li>
 	<br><i>事件拥有者声明事件，事件的响应者将自己的事件处理器挂载在事件上，当事件被触发，调用所有挂载在事件上的事件处理器.</i><br\>
-	
 </details>
 <details close>
 <summary>事件的调用</summary>
 事件成员只能出现在+=或-=符号的左侧，以及声明事件的类内部
 </details>
 
-1. First list item
-   <details open>
-   - <summary>First nested list item</summary>
-   </details>
-     - Second nested list item
+<h2>转化</h2>
+<details close>
+<summary>什么是转化</summary>
+声明2个不同类型的变量，将一个变量（源）的值赋值给另外一个变量（目标）
+</details>
+		
+<details close>
+<summary>隐式转化</summary>
+ 不会丢失数据或者精度，能默认进行转化
+ <br><i>ex:子类转父类，接口的实现类转接口,任何类型转object，int转long</i><br\>
+</details>
+
+<details close>
+<summary>显式转化</summary>
+ 有丢失数据或者精度，或报错的风险需要强制转化表达式
+ <br><i>ex:父类转子类，long转int</i><br\>
+</details>
+
+<details close>
+<summary>溢出检测</summary>
+<li>check:int a=check((int)longNumber); 如果值溢出就抛出OverflowException异常
+<li>uncheck：int a=check((int)longNumber); 值溢也不报错
+<br><i>check和uncheck只管整数溢出，不作用于引用类型或浮点型</i><br\>
+
