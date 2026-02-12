@@ -32,14 +32,15 @@ namespace Csharp.generic_
         {
             Program program = new Program();
             Get<Dog> getDog = program.GetDog;
+
             Get<Animal> GetAnimal = getDog;//need out
-            var animal = GetAnimal();
+            Animal animal = GetAnimal();
+
             Console.WriteLine($"{animal}");
 
             Care<Animal> careAnimal = program.CareAnimal;
             Care<Dog> careDog = careAnimal;
-            Dog dog = new Dog();
-            careDog(dog);//can move
+            careDog(new Dog());//can move
         }
     }
 }

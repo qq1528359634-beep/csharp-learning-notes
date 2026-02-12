@@ -48,6 +48,7 @@ namespace Csharp.generic
             {
                 ICage<Dog> dogCage = new Cage();
                 ICage<Animal> animalCage = dogCage;
+                Animal animal= animalCage.Get();
                 Console.WriteLine($"{animalCage.Get()}");
 
                 ITrainer<Animal> animalT = new Trainer();
